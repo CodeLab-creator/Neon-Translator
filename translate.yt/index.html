@@ -1,0 +1,51 @@
+<!--- Created By: CodeLab. Copyright: 2026 --->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EXTREME TRANSLATE — Neon Cyberpunk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg" role="img" aria-label="Animated neon background"></canvas>
+
+  <section class="glass-panel" id="translator-panel" role="region" aria-label="Translator">
+    <header>
+      <h1 id="titleText" class="neon-title">EXTREME TRANSLATE</h1>
+      <p class="subtitle">Ultra Language Conversion Interface (118 Languages)</p>
+    </header>
+
+    <form class="controls" id="translateForm" aria-label="Translation controls">
+      <label for="inputText" class="visually-hidden">Text to translate</label>
+      <textarea id="inputText" placeholder="Enter text to translate..." rows="5"></textarea>
+
+      <div class="controls-row">
+        <div class="select-wrap">
+          <label for="languageSelect" class="visually-hidden">Target language</label>
+          <select id="languageSelect" title="Select output language" aria-label="Select translation language"></select>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="translateBtn" aria-label="Translate and speak">Translate & Speak</button>
+        </div>
+      </div>
+    </form>
+
+    <section class="output-glass" aria-live="polite" aria-atomic="true">
+      <h2>Translation</h2>
+      <p id="outputText" class="output-text">Your translation will appear here...</p>
+      <p class="muted">Detected language: <span id="detectedLang">-</span></p>
+    </section>
+  </section>
+
+  <aside class="glass-panel" id="country-panel" role="region" aria-label="Country information">
+    <h2>Country Info</h2>
+    <div id="country-meta">
+      <p><strong id="country-name">-</strong></p>
+      <div id="country-desc-text"><span>Country description and Danger Levels will appear here.</span></div>
+    </div>
+  </aside>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
